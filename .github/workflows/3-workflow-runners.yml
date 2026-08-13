@@ -29,7 +29,7 @@ jobs:
 
   mac-echo:
     name: Job par rodar o workflow dentro da maquina auto hospedada do github - Mac
-    runs-on: mac-latest
+    runs-on: macos-latest
 
     steps:
       - name: Show OS
@@ -52,6 +52,7 @@ jobs:
 
     steps:
       - name: Step para verificar runner em execucao com variavel de ambiente
+        shell: bash
         run: |
           echo "Verificando runner..."
           if [ $RUNNER_OS == "Linux" ]; then
