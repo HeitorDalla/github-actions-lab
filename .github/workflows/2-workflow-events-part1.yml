@@ -1,0 +1,12 @@
+name: 2 - Workflow Events Part1
+
+on: push
+
+jobs:
+  echo:
+    name: Primeiro job criado
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Show the trigger
+        run: O evento que acionou o workflow foi o ${{ github.event_name }}
