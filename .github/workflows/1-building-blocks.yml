@@ -1,0 +1,40 @@
+name: 1 - Workflow Building blocks
+run-name: Criado por ${{ github.actor }} na branch ${{ github.ref_name }}
+
+on:
+  push:
+    branches:
+      - main
+      
+  pull_request:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  echo-hello:
+    name: Primeiro job criado
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Say hello
+        run: echo "Ola Hello World"
+
+  echo-goodbye:
+    name: Segundo job criado
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Failed step
+        run: |
+          echo "I will fail"
+          exit 1
+
+      - name: Success step
+        run: |
+          echo "I will succeed"
+          exit 0
+
+      - name: Say goodbye
+        run: echo "GoodBye!"
