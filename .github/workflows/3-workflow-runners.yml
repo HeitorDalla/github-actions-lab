@@ -22,6 +22,7 @@ jobs:
 
     steps:
       - name: Show OS
+        shell: bash
         run: |
           echo "This job is running on a Windows runner."
           echo "O runner que o job esta rodando é $RUNNER_OS"
@@ -53,7 +54,7 @@ jobs:
       - name: Step para verificar runner em execucao com variavel de ambiente
         run: |
           echo "Verificando runner..."
-          if [ $RUNNER_OS == "Linux ]; then
+          if [ $RUNNER_OS == "Linux" ]; then
             echo "Nao é a maquina Linux em execução"
           fi
 
