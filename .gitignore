@@ -1,0 +1,18 @@
+# Build
+target/
+build/
+
+# Dependências do Gradle
+.gradle/
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# Arquivos temporários
+*.log
+.DS_Store
+
+# Variáveis locais
+.env
