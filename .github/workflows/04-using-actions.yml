@@ -31,4 +31,11 @@ jobs:
         run: mvn -B package
 
       - name: Checkout installed dependencies (/target)
-        run: ls -l
+        if: always()
+        run: |
+          if [ $? -eq 0 ]; then
+            echo "Build OK"
+          else
+            echo "Build com erro"
+            exit 1
+          fi
