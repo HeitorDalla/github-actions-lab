@@ -25,7 +25,7 @@ jobs:
           cache: 'maven'
 
       - name: Checkout version java
-        run: java --version
+        run: java -version
 
       - name: Install Dependencies
         run: mvn -B package
