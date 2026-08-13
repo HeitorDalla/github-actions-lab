@@ -7,9 +7,9 @@ on:
 
   pull_request:
     branches:
-      - 'feat/***'
-      - 'fix/***'
-      - 'test/***'
+      - 'feat/*'
+      - 'fix/*'
+      - 'test/*'
 
   schedule:
     - cron: "*/5 * * * 1-5"
