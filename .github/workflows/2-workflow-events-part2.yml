@@ -1,0 +1,27 @@
+name: 3 - Workflow Events Part2
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - "feat/***"
+      - "fix/***"
+      - "test/***"
+
+  schedule:
+    - cron: "* 12 * * 1-5"
+      timezone: "America/Sao_Paulo"
+
+  workflow_dispatch:
+
+jobs:
+  echo:
+    name: Nome do primeiro job
+    runs-on: ubuntu-latest
+
+    steps:
+        - name: Show the trigger
+          run: O evento que acionou o workflow foi o ${{ github.event_name }}
