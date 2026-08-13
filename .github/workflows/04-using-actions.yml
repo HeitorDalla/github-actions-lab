@@ -39,3 +39,6 @@ jobs:
             echo "Build com erro"
             exit 1
           fi
+
+      - name: Run Unit Tests
+        run: mvn clean test
