@@ -1,9 +1,11 @@
 name: 04 - Using Actions
 
 on:
-  push:
-    branches:
-      - main
+#  push:
+#    branches:
+#      - main
+
+  workflow_dispatch:
 
 jobs:
   build:
@@ -13,9 +15,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v7
-
-#      - name: List files
-#        run: ls -l
 
       - name: Setup Java
         uses: actions/setup-java@v5
