@@ -56,8 +56,11 @@ jobs:
         run: |
           echo "Verificando runner..."
           if [ $RUNNER_OS == "Linux" ]; then
-            echo "Nao é a maquina Linux em execução"
-          fi
+            echo "É a maquina Linux em execução."
+          elif [ $RUNNER_OS == "Windows"]; then
+            echo "É a maquina Windows em execução."
+          else
+            echo "É a maquina Mac em execução."
 
 
 # Usar contextos do github actions fora de scripts bash (usar quando a decisao é do workflow)
