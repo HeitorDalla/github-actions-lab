@@ -61,6 +61,7 @@ jobs:
             echo "É a maquina Windows em execução."
           else
             echo "É a maquina Mac em execução."
+          fi
 
 
 # Usar contextos do github actions fora de scripts bash (usar quando a decisao é do workflow)
