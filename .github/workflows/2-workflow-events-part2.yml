@@ -24,4 +24,4 @@ jobs:
 
     steps:
         - name: Show the trigger
-          run: O evento que acionou o workflow foi o ${{ github.event_name }}
+          run: echo "O evento que acionou o workflow foi o ${{ github.event_name }}"
