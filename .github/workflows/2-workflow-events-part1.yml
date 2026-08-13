@@ -1,6 +1,9 @@
 name: 2 - Workflow Events Part1
 
-on: workflow_dispatch
+on: 
+  # push:
+    
+  workflow_dispatch:
 
 jobs:
   echo:

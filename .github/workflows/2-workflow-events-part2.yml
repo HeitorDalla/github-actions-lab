@@ -1,15 +1,15 @@
 name: 3 - Workflow Events Part2
 
 on:
-  push:
-    branches:
-      - main
+  # push:
+  #   branches:
+  #     - main
 
-  pull_request:
-    branches:
-      - 'feat/*'
-      - 'fix/*'
-      - 'test/*'
+  # pull_request:
+  #   branches:
+  #     - 'feat/*'
+  #     - 'fix/*'
+  #     - 'test/*'
 
   schedule:
     - cron: "*/5 * * * 1-5"
