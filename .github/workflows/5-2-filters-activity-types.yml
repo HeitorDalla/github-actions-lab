@@ -5,6 +5,8 @@ on:
     types: [closed]
     branches: [main]
 
+  workflow_dispatch:
+
 jobs:
   echo:
     name: Job para imprimir mensagem
