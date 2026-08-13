@@ -57,7 +57,7 @@ jobs:
           echo "Verificando runner..."
           if [ $RUNNER_OS == "Linux" ]; then
             echo "É a maquina Linux em execução."
-          elif [ $RUNNER_OS == "Windows"]; then
+          elif [ $RUNNER_OS == "Windows" ]; then
             echo "É a maquina Windows em execução."
           else
             echo "É a maquina Mac em execução."
