@@ -11,9 +11,9 @@ on:
   #     - 'fix/*'
   #     - 'test/*'
 
-  schedule:
-    - cron: "*/5 * * * 1-5"
-      timezone: "America/Sao_Paulo"
+  # schedule:
+  #   - cron: "*/5 * * * 1-5"
+  #     timezone: "America/Sao_Paulo"
 
   workflow_dispatch:
 
