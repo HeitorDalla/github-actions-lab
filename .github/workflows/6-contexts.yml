@@ -12,13 +12,24 @@ jobs:
     name: Job para executar contextos
     runs-on: ubuntu-latest
 
+#    steps:
+#        - name: Display Information using environment variables
+#          run: |
+#            echo "Event name: $GITHUB_EVENT_NAME"
+#            echo "Ref: $GITHUB_REF"
+#            echo "SHA: $GITHUB_SHA"
+#            echo "Actor: $GITHUB_ACTOR"
+#            echo "Workflow: $GITHUB_WORKFLOW"
+#            echo "Run ID: $GITHUB_RUN_ID"
+#            echo "Run Number: $GITHUB_RUN_NUMBER"
+
     steps:
-        - name: Display Information
-          run: |
-            echo "Event name: $GITHUB_EVENT_NAME"
-            echo "Ref: $GITHUB_REF"
-            echo "SHA: $GITHUB_SHA"
-            echo "Actor: $GITHUB_ACTOR"
-            echo "Workflow: $GITHUB_WORKFLOW"
-            echo "Run ID: $GITHUB_RUN_ID"
-            echo "Run Number: $GITHUB_RUN_NUMBER"
+      - name: Display Information using contexts
+        run: |
+          echo "Event name: ${{ github.event_name }}"
+          echo "Ref: ${{ github.ref }}"
+          echo "SHA: ${{ github.sha }}"
+          echo "Actor: ${{ github.actor }}"
+          echo "Workflow: ${{ github.workflow }}"
+          echo "Run ID: ${{ github.run_id }}"
+          echo "Run Number: ${{ github.run_number }}"
