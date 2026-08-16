@@ -12,7 +12,7 @@ on:
         default: false
         type: boolean
 
-run-name: My custom workflow run name - ${{ runner.os }}
+run-name: 6 - Contexts | DEBUG - ${{ inputs.debug }}
 
 jobs:
   echo-data:
