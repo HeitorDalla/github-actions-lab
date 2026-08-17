@@ -3,9 +3,9 @@ name: 7 - Using Expressions
 run-name: 7 - Using Expression | DEBUG - ${{ inputs.debug && 'ON' || 'OFF' }}
 
 on:
-  push:
-    branches:
-      - main
+#  push:
+#    branches:
+#      - main
   workflow_dispatch:
     inputs:
       debug:
