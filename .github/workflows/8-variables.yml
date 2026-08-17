@@ -67,6 +67,8 @@ jobs:
     runs-on: ubuntu-latest
 
     environment: staging
+    env:
+      OVERWRITTEN_VAR: "I have been overwritten at the step level"
 
     steps:
       - name: Print Staging Variables
