@@ -19,6 +19,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Wait 30 seconds
+        run: sleep 30
+        shell: bash
+        
       - name: Failing step
         run: exit 1
 
