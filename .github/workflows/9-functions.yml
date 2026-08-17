@@ -3,7 +3,7 @@ name: 9 - Using Functions
 run-name: 9 - Using Functions | DEBUG - ${{ inputs.debug && 'ON' || 'OFF' }}
 
 on:
-  push:
+  pull_request:
     branches:
       - main
 
