@@ -20,14 +20,17 @@ jobs:
 
     steps:
       - name: Print PR title
-        run: echo "Print PR title"
+        run: echo "$PR_TITLE"
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
 
       - name: Print PR labels
-        run: |
-          echo "${{ toJSON(github.event.pull_request.labels) }}"
+        run: echo "$PR_LABELS"
+        env:
+          PR_LABELS: ${{ toJSON(github.event.pull_request.labels) }}
 
       - name: Bug step
-        if: ${{ failure() && github.event.pull_request == 'fix' }}
+        if: ${{ failure() && !cancelled() && contains(github.event.pull_request == 'fix') }}
         run: echo "I am a bug fix"
 
       - name: Wait 30 seconds
