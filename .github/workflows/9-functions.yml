@@ -30,7 +30,7 @@ jobs:
           PR_LABELS: ${{ toJSON(github.event.pull_request.labels) }}
 
       - name: Bug step
-        if: ${{ failure() && !cancelled() && contains(github.event.pull_request.title, 'fix') }}
+        if: ${{ && !cancelled() && contains(github.event.pull_request.title, 'fix') }}
         run: echo "I am a bug fix"
 
       - name: Wait 30 seconds
