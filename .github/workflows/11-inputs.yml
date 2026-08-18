@@ -39,7 +39,7 @@ jobs:
 
     needs: [build]
 
-    if: ${{ !inputs.dry_run }}
+    if: ${{ !inputs.dry-run }}
 
     environment: ${{ inputs.target }}
 
