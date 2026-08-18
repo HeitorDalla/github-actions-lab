@@ -37,7 +37,7 @@ jobs:
       - name: Show OS
         run: |
           echo "This job is running on a MacOS runner."
-          echo "O runner que o jobe esta rodando é $RUNNER_OS"
+          echo "O runner que o job esta rodando é $RUNNER_OS"
 
   verify-runner-context: 
     name: Verificar runner que esta executando o workflow pelo contexto do github actions
