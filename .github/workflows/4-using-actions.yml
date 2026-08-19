@@ -1,9 +1,9 @@
 name: 4 - Using Actions
 
 on:
-#  push:
-#    branches:
-#      - main
+  #  push:
+  #    branches:
+  #      - main
 
   workflow_dispatch:
 
@@ -20,8 +20,8 @@ jobs:
         uses: actions/setup-java@v5
         with:
           distribution: temurin
-          java-version: '8'
-          cache: 'maven'
+          java-version: "8"
+          cache: "maven"
 
       - name: Checkout version java
         run: java -version

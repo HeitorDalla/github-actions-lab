@@ -1,9 +1,9 @@
 name: 8 - Using Variables
 
 on:
-#  push:
-#    branches:
-#      - main
+  #  push:
+  #    branches:
+  #      - main
 
   workflow_dispatch:
 
@@ -40,7 +40,7 @@ jobs:
 
         run: |
           echo "Step env var: $OVERWRITTEN"
-          
+
   echo2:
     runs-on: ubuntu-latest
 

@@ -3,9 +3,9 @@ name: 9 - Using Functions
 run-name: 9 - Using Functions | DEBUG - ${{ inputs.debug && 'ON' || 'OFF' }}
 
 on:
-#  pull_request:
-#    branches:
-#      - main
+  #  pull_request:
+  #    branches:
+  #      - main
 
   workflow_dispatch:
     inputs:
@@ -36,7 +36,7 @@ jobs:
       - name: Wait 30 seconds
         run: sleep 30
         shell: bash
-        
+
       - name: Failing step
         run: exit 1
 

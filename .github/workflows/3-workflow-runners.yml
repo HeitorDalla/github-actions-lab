@@ -4,7 +4,7 @@ on:
   # push:
   #   branches:
   #     - main
-  
+
   workflow_dispatch:
 
 jobs:
@@ -39,14 +39,14 @@ jobs:
           echo "This job is running on a MacOS runner."
           echo "O runner que o job esta rodando é $RUNNER_OS"
 
-  verify-runner-context: 
+  verify-runner-context:
     name: Verificar runner que esta executando o workflow pelo contexto do github actions
     runs-on: ubuntu-latest
 
     steps:
-        - name: Passo para verificar runner em execucao com contexto do github
-          if: runner.os == 'Linux'
-          run: echo "Este step roda somente em Linux"
+      - name: Passo para verificar runner em execucao com contexto do github
+        if: runner.os == 'Linux'
+        run: echo "Este step roda somente em Linux"
 
   verify-runner-environment:
     name: Verificar runner que esta executando o workflow pela variavel de ambiente
@@ -64,7 +64,6 @@ jobs:
           else
             echo "É a maquina Mac em execução."
           fi
-
 
 # Usar contextos do github actions fora de scripts bash (usar quando a decisao é do workflow)
 # Usar variaveis de ambiente dentro de scripts bash (usar quando a decisao é dentro do script)
