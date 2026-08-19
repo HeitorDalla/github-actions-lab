@@ -17,6 +17,7 @@ jobs:
 
     outputs:
       build-status: ${{ steps.build.outputs.status }}
+      output1: ${{ steps.build.outputs.output1 }}
 
     steps:
       - name: Print GITHUB_OUTPUT path
@@ -45,3 +46,6 @@ jobs:
     steps:
       - name: Deploy
         run: echo "Deploying"
+
+      - name: Print Outputs
+        run: echo "${{ needs.build.outputs.output1 }}"
