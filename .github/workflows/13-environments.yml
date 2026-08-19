@@ -16,9 +16,9 @@ jobs:
     environment: ${{ inputs.target-env }}
 
     env:
-      my-env-value: ${{ vars.MY_ENV_VALUE || 'default value' }}
+      MY_ENV_VALUE: ${{ vars.MY_ENV_VALUE || 'default value' }}
 
     steps:
       - name: Echo vars
         run: |
-          echo "Env variable: $my-env-value"
+          echo "Env variable: $MY_ENV_VALUE"
